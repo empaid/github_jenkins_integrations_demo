@@ -20,14 +20,15 @@ pipeline {
                     
                     mail to: "$TEST_EMAIL_RECEPIENT",
                     subject: "Tests stage is successfull.",
-                    body: "Please find the attached results of the tests"
+                    body: "Please find the attached results of the tests",
+                    attachLog: "tests.log"
             
                 }
                 failure {
                     mail to: "$TEST_EMAIL_RECEPIENT",
                     subject: "Tests stage is unsuccessfull.",
-                    body: "Please find the attached log of the tests"
-            
+                    body: "Please find the attached log of the tests",
+                    attachLog: "tests.log"
                 }
                 
                 }
@@ -47,13 +48,15 @@ pipeline {
                 success {
                     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
                     subject: "Security scan stage is successfull.",
-                    body: "Please find the attached results of the scan"
+                    body: "Please find the attached results of the scan",
+                    attachLog: "security_scan.log"
             
                 }
                 failure {
                     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
                     subject: "Security stage is unsuccessfull.",
-                    body: "Please find the attached log of the scan"
+                    body: "Please find the attached log of the scan",
+                    attachLog: "security_scan.log"
             
                 }
                 
