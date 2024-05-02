@@ -18,8 +18,8 @@ pipeline {
             post {
                 success {
                     
-                    mail to: "hardikpurohit26@gmail.com"
-                    subject: "Tests stage is successfull."
+                    mail to: "hardikpurohit26@gmail.com",
+                    subject: "Tests stage is successfull.",
                     body: "Please find the attached results of the tests"
             
                 }
