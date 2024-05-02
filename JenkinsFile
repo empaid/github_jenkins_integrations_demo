@@ -16,19 +16,19 @@ pipeline {
                 echo 'Tools used: Selenium, Appium, Katalon'
             }
             post {
-                success {
+                // success {
                     
-                    mail to: "$TEST_EMAIL_RECEPIENT"
-                    subject: "Tests stage is successfull."
-                    body: "Please find the attached results of the tests"
+                //     mail to: "$TEST_EMAIL_RECEPIENT"
+                //     subject: "Tests stage is successfull."
+                //     body: "Please find the attached results of the tests"
             
-                }
-                failure {
-                    mail to: "$TEST_EMAIL_RECEPIENT"
-                    subject: "Tests stage is unsuccessfull."
-                    body: "Please find the attached log of the tests"
+                // }
+                // failure {
+                //     mail to: "$TEST_EMAIL_RECEPIENT"
+                //     subject: "Tests stage is unsuccessfull."
+                //     body: "Please find the attached log of the tests"
             
-                }
+                // }
                 
                 }
         }
@@ -44,19 +44,18 @@ pipeline {
                 echo 'Tools used: Nessus, OpenVAS'
             }
             post {
-                success {
-                    
-                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT"
-                    subject: "Security scan stage is successfull."
-                    body: "Please find the attached results of the scan"
+                // success {
+                //     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT"
+                //     subject: "Security scan stage is successfull."
+                //     body: "Please find the attached results of the scan"
             
-                }
-                failure {
-                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT"
-                    subject: "Security stage is unsuccessfull."
-                    body: "Please find the attached log of the scan"
+                // }
+                // failure {
+                //     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT"
+                //     subject: "Security stage is unsuccessfull."
+                //     body: "Please find the attached log of the scan"
             
-                }
+                // }
                 
                 }
         }
