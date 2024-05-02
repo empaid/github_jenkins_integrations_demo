@@ -15,7 +15,7 @@ pipeline {
                 echo 'Unit and integration tests ensure that the code runs as expected'
                 echo 'Tools used: Selenium, Appium, Katalon'
             }
-            post {
+            // post {
                 // success {
                     
                 //     mail to: "$TEST_EMAIL_RECEPIENT"
@@ -30,7 +30,7 @@ pipeline {
             
                 // }
                 
-                }
+                // }
         }
         stage('Code Analysis') {
             steps {
@@ -43,7 +43,7 @@ pipeline {
                 echo 'Perform security scan to identify any vulnerabilities'
                 echo 'Tools used: Nessus, OpenVAS'
             }
-            post {
+            // post {
                 // success {
                 //     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT"
                 //     subject: "Security scan stage is successfull."
@@ -57,7 +57,7 @@ pipeline {
             
                 // }
                 
-                }
+                // }
         }
         stage('Deploy to Staging') {
             steps {
