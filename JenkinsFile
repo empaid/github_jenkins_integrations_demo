@@ -15,14 +15,14 @@ pipeline {
                 echo 'Unit and integration tests ensure that the code runs as expected'
                 echo 'Tools used: Selenium, Appium, Katalon'
             }
-            // post {
-                // success {
+            post {
+                success {
                     
-                //     mail to: "$TEST_EMAIL_RECEPIENT"
-                //     subject: "Tests stage is successfull."
-                //     body: "Please find the attached results of the tests"
+                    mail to: "$TEST_EMAIL_RECEPIENT"
+                    subject: "Tests stage is successfull."
+                    body: "Please find the attached results of the tests"
             
-                // }
+                }
                 // failure {
                 //     mail to: "$TEST_EMAIL_RECEPIENT"
                 //     subject: "Tests stage is unsuccessfull."
@@ -30,7 +30,7 @@ pipeline {
             
                 // }
                 
-                // }
+                }
         }
         stage('Code Analysis') {
             steps {
