@@ -34,7 +34,7 @@ pipeline {
         }
         stage('Code Analysis') {
             steps {
-                echo 'External tool that analyze if the code meets the industry standards'
+                echo 'External tool that analyze if the code meets the industry standards '
                 echo 'Tools used: SonarQube, Coverity, CodeScene'
             }
         }
