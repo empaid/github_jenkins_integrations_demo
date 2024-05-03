@@ -27,7 +27,7 @@ pipeline {
                     // attachLog "tests.log"
                     mail to: "$TEST_EMAIL_RECEPIENT",
                     subject: "Tests stage is unsuccessfull.",
-                    body: "Please find the attached log of the tests"
+                    body: "Please find the attached log of the tests "
                     
                 }
                 
