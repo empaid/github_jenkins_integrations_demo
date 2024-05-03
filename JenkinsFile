@@ -47,8 +47,7 @@ pipeline {
             post {
                 success {
                     // 
-                    mail attachLog: true,
-                    to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
                     subject: "Security scan stage is successfull.",
                     body: "Please find the attached results of the scan"
                 }
