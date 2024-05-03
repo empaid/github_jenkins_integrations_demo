@@ -49,7 +49,7 @@ pipeline {
                     // 
                     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
                     subject: "Security scan stage is successfull.",
-                    body: "Please find the attached results of the scan"
+                    body: "Please find the attached results of the scan",
                     attachLog: "security_scan.log"
                 }
                 failure {
