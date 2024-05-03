@@ -24,8 +24,8 @@ pipeline {
             
                 }
                 failure {
-                    // attachLog "tests.log"
-                    mail to: "$TEST_EMAIL_RECEPIENT",
+                    emailext attachLog: true,
+                    to: "$TEST_EMAIL_RECEPIENT",
                     subject: "Tests stage is unsuccessfull.",
                     body: "Please find the attached log of the tests "
                     
@@ -46,19 +46,19 @@ pipeline {
             }
             post {
                 success {
-                    // 
-                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+                    emailext attachLog: true,
+                    to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
                     subject: "Security scan stage is successfull.",
                     body: "Please find the attached results of the scan"
                 }
-                // failure {
-                //     // attachLog "security_scan.log"
-                //     mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
-                //     subject: "Security stage is unsuccessfull.",
-                //     body: "Please find the attached log of the scan"
+                failure {
+                    emailext attachLog: true,
+                    to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+                    subject: "Security stage is unsuccessfull.",
+                    body: "Please find the attached log of the scan"
                     
             
-                // }
+                }
                 
                 }
         }
