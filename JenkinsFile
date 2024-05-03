@@ -44,24 +44,24 @@ pipeline {
                 echo 'Perform security scan to identify any vulnerabilities'
                 echo 'Tools used: Nessus, OpenVAS'
             }
-            post {
-                success {
-                    // 
-                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
-                    subject: "Security scan stage is successfull.",
-                    body: "Please find the attached results of the scan",
-                    attachLog: "security_scan.log"
-                }
-                failure {
-                    // attachLog "security_scan.log"
-                    mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
-                    subject: "Security stage is unsuccessfull.",
-                    body: "Please find the attached log of the scan"
+            // post {
+            //     success {
+            //         // 
+            //         mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+            //         subject: "Security scan stage is successfull.",
+            //         body: "Please find the attached results of the scan",
+            //         attachLog: "security_scan.log"
+            //     }
+            //     failure {
+            //         // attachLog "security_scan.log"
+            //         mail to: "$SECURITY_SCAN_EMAIL_RECEPIENT",
+            //         subject: "Security stage is unsuccessfull.",
+            //         body: "Please find the attached log of the scan"
                     
             
-                }
+            //     }
                 
-                }
+            //     }
         }
         stage('Deploy to Staging') {
             steps {
