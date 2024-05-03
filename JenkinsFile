@@ -17,7 +17,7 @@ pipeline {
             }
             post {
                 success {
-                    emailext attachLog: "tests.log",
+                    emailext attachLog: true,
                     to: "$TEST_EMAIL_RECEPIENT",
                     subject: "Tests stage is successfull.",
                     body: "Please find the attached results of the tests"
